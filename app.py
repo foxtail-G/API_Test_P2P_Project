@@ -7,6 +7,12 @@ from logging import handlers
 # 项目根目录
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+# 基础URL
+BASE_URL = 'http://user-p2p-test.itheima.net/'
+
+# 请求头
+HEADERS_FROM = 'Content-Type:application/x-www-form-urlencoded'
+
 
 def ini_configLog(defaultfilename="P2PAPIlog"):
     """
