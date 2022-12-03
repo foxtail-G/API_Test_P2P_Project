@@ -6,7 +6,7 @@ import app
 
 class Login_API:
     def __init__(self):
-        self.get_image_code_URL = app.BASE_URL + 'common/public/verifycode1/'  # 获取图⽚验证码
+        self.get_image_code_URL = app.BASE_URL + '/common/public/verifycode1/'  # 获取图⽚验证码
         self.get_sms_code_URL = app.BASE_URL + '/member/public/sendSms/'  # 获取短信验证码
         self.reg_user = app.BASE_URL + '/member/public/reg'  # 注册用户
         self.login_user = app.BASE_URL + '/member/public/login'  # 登录账号
@@ -17,22 +17,21 @@ class Login_API:
         获取图⽚验证码
         :return:
         """
-
         return resp.get(url=self.get_image_code_URL + parameter)
 
-    def get_sms_code(self):
+    def get_sms_code(self, resp, parameter,cookie):
         """
         获取短信验证码
         :return:
         """
-        pass
+        return resp.post(url=self.get_sms_code_URL, params=parameter,cookies=cookie)
 
-    def reg_user(self):
+    def reg_user(self,resp,parameter,cookie):
         """
         注册账号
         :return:
         """
-        pass
+        return resp.post(url=self.reg_user, params=parameter, cookies=cookie)
 
     def login_user(self):
         """

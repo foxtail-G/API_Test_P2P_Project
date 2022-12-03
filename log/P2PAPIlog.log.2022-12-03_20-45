@@ -1,0 +1,9 @@
+2022-12-03 20:33:51,681 INFO [root] [Reg_Login_TestCase.py(test01_sms_code:60)] - 获取短信验证码成功:{'status': 200, 'description': '短信发送成功'}
+2022-12-03 20:34:55,835 INFO [root] [Reg_Login_TestCase.py(test01_sms_code:60)] - 获取短信验证码结果:{'status': 200, 'description': '短信发送成功'}
+2022-12-03 20:34:56,080 INFO [root] [Reg_Login_TestCase.py(test02_sms_code:77)] - 获取短信验证码结果:{'status': 100, 'description': '图片验证码错误'}
+2022-12-03 20:35:09,381 INFO [root] [Reg_Login_TestCase.py(test02_sms_code:76)] - 获取短信验证码结果:{'status': 100, 'description': '图片验证码错误'}
+2022-12-03 20:36:44,436 INFO [root] [Reg_Login_TestCase.py(test02_sms_code:78)] - 获取短信验证码结果:{'status': 100, 'description': '图片验证码错误'}
+2022-12-03 20:38:02,507 INFO [root] [Reg_Login_TestCase.py(test02_sms_code:78)] - 获取短信验证码结果:{'status': 100, 'description': '图片验证码错误'}
+2022-12-03 20:40:33,576 INFO [root] [Reg_Login_TestCase.py(test03_sms_code:97)] - 获取短信验证码失败-手机号错误:{'status': 200, 'description': '短信发送成功'}
+2022-12-03 20:41:01,729 INFO [root] [Reg_Login_TestCase.py(test03_sms_code:97)] - 获取短信验证码失败-手机号错误:{'status': 200, 'description': '短信发送成功'}
+2022-12-03 20:45:32,485 INFO [root] [Reg_Login_TestCase.py(test04_sms_code:118)] - 获取短信验证码失败-注册类型错误:{'status': 200, 'description': '短信发送成功'}

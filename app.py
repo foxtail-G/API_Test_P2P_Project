@@ -8,7 +8,7 @@ from logging import handlers
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # 基础URL
-BASE_URL = 'http://user-p2p-test.itheima.net/'
+BASE_URL = 'http://user-p2p-test.itheima.net'
 
 # 请求头
 HEADERS_FROM = 'Content-Type:application/x-www-form-urlencoded'
