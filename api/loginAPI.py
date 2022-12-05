@@ -19,30 +19,30 @@ class Login_API:
         """
         return resp.get(url=self.get_image_code_URL + parameter)
 
-    def get_sms_code(self, resp, parameter,cookie):
+    def get_sms_code(self, resp, parameter, cookie):
         """
         获取短信验证码
         :return:
         """
-        return resp.post(url=self.get_sms_code_URL, params=parameter,cookies=cookie)
+        return resp.post(url=self.get_sms_code_URL, params=parameter, cookies=cookie)
 
-    def reg_user(self,resp,parameter,cookie):
+    def register_user(self, resp, parameter, cookie):
         """
         注册账号
         :return:
         """
         return resp.post(url=self.reg_user, params=parameter, cookies=cookie)
 
-    def login_user(self):
+    def login_user_info(self, resp, parameter):
         """
         登录账号
         :return:
         """
-        pass
+        return resp.post(url=self.login_user, params=parameter)
 
-    def login_user_islogin(self):
+    def login_user_islogin(self, resp, parameter, cookie):
         """
         是否登录成功
         :return:
         """
-        pass
+        return resp.post(url=self.login_islogin, params=parameter, cookies=cookie)

@@ -1,0 +1,1 @@
+2022-12-05 12:13:02,976 INFO [root] [Reg_Login_TestCase.py(test06_RegUser_login_PwdError3:395)] - 登录账号-连续执行密码错误3次:{'status': 100, 'description': '由于连续输入错误密码达到上限，账号已被锁定，请于1.0分钟后重新登录'}

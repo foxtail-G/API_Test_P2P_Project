@@ -1,1 +1,1 @@
-2022-12-03 21:28:20,726 INFO [root] [Reg_Login_TestCase.py(test01_sms_code:59)] - 获取短信验证码结果:{'status': 200, 'description': '短信发送成功'}
+2022-12-05 15:48:49,471 INFO [root] [Reg_Login_TestCase.py(test07_RegUser_login_isLogin:413)] - 是否登录检查-登录成功:{'status': 200, 'description': 'OK'}
