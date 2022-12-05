@@ -1,2 +1,0 @@
-2022-12-05 16:32:09,033 INFO [root] [Reg_Login_TestCase.py(test08_RegUser_login_NotLogin:427)] - 是否登录检查-未登录:{'status': 250, 'description': '您未登陆！'}
-2022-12-05 16:34:29,267 INFO [root] [Reg_Login_TestCase.py(test08_RegUser_login_NotLogin:427)] - 是否登录检查-未登录:{'status': 250, 'description': '您未登陆！'}
