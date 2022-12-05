@@ -1,4 +1,0 @@
-2022-12-05 11:54:06,969 INFO [root] [Reg_Login_TestCase.py(test01_RegUser_login_success:324)] - 登录账号成功:{'status': 200, 'description': '登录成功'}
-2022-12-05 11:55:34,158 INFO [root] [Reg_Login_TestCase.py(test02_RegUser_login_success:338)] - 登录账号-用户不存在:{'status': 100, 'description': '用户不存在'}
-2022-12-05 11:58:38,688 INFO [root] [Reg_Login_TestCase.py(test03_RegUser_login_PwdNotnull:352)] - 登录账号-密码不能为空:{'status': 100, 'description': '密码不能为空'}
-2022-12-05 11:59:49,579 INFO [root] [Reg_Login_TestCase.py(test03_RegUser_login_PwdNotnull:352)] - 登录账号-密码不能为空:{'status': 100, 'description': '密码不能为空'}

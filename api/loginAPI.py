@@ -40,7 +40,7 @@ class Login_API:
         """
         return resp.post(url=self.login_user, params=parameter)
 
-    def login_user_islogin(self, resp, parameter, cookie):
+    def login_user_islogin(self, resp, parameter, cookie=None):
         """
         是否登录成功
         :return:

@@ -406,7 +406,23 @@ class RegLoginCase(unittest.TestCase):
         }
         resp_login = self.login_api.login_user_info(self.session, data)
 
-        resp = self.login_api.login_user_islogin(self.session, data,requests.utils.dict_from_cookiejar(resp_login.cookies))
+        resp = self.login_api.login_user_islogin(self.session, data,
+                                                 requests.utils.dict_from_cookiejar(resp_login.cookies))
         self.assertEqual(resp.status_code, 200)  # 断言响应状态码
         self.assertEqual(resp.json().get('description'), "OK")  # 断言返回代码
         logging.info(f"是否登录检查-登录成功:{resp.json()}")
+
+    def test08_RegUser_login_NotLogin(self):
+        """
+        是否登录检查-未登录
+        :return:
+        """
+        data = {
+            "keywords": 13266707774,
+            "password": "123"
+        }
+
+        resp = self.login_api.login_user_islogin(self.session, data)
+        self.assertEqual(resp.status_code, 200)  # 断言响应状态码
+        self.assertEqual(resp.json().get('description'), "您未登陆！")  # 断言返回代码
+        logging.info(f"是否登录检查-未登录:{resp.json()}")

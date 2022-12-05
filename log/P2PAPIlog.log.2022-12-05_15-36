@@ -1,1 +1,0 @@
-2022-12-05 15:36:43,623 INFO [root] [Reg_Login_TestCase.py(test07_RegUser_login_isLogin:411)] - 是否登录检查-登录成功:{'status': 250, 'description': '您未登陆！'}

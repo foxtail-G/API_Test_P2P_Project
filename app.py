@@ -12,6 +12,8 @@ BASE_URL = 'http://user-p2p-test.itheima.net'
 
 # 请求头
 HEADERS_FROM = 'Content-Type:application/x-www-form-urlencoded'
+HEADERS_OpenAccount = "Content-Typemultipart/form-data"
+
 
 
 def ini_configLog(defaultfilename="P2PAPIlog"):
