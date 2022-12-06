@@ -1,0 +1,59 @@
+{
+  "test_investment_data": [
+    {
+      "desc": "获取 投资产品列表 无参数成功",
+      "loan_type": "",
+      "amount_search": "",
+      "statuscode": 200
+    },
+    {
+      "desc": "获取产品列表 - 全部标和信用标 - 成功",
+      "loan_type": 1,
+      "amount_search": "",
+      "statuscode": 200
+    },
+    {
+      "desc": "获取产品列表 - 天标 - 成功",
+      "loan_type": 3,
+      "amount_search":"",
+      "statuscode": 200
+    },
+    {
+      "desc": "获取产品列表 - 担保标 - 成功",
+      "loan_type": 4,
+      "amount_search":"",
+      "statuscode": 200
+    },
+    {
+      "desc": "获取产品列表 - 抵押标 - 成功",
+      "loan_type": 5,
+      "amount_search":"",
+      "statuscode": 200
+    },
+    {
+      "desc": "获取产品列表 - 流转标 - 成功",
+      "loan_type": 6,
+      "amount_search":"",
+      "statuscode": 200
+    },
+    {
+      "desc": "成功获取产品列表 - 金额0-2000元",
+      "loan_type": 1,
+      "amount_search": "0-2000",
+      "statuscode": 200
+    },
+    {
+      "desc": "成功获取产品列表 - 金额2000-5000元",
+      "loan_type": 1,
+      "amount_search": "2000-5000",
+      "statuscode": 200
+    },
+    {
+      "desc": "成功获取产品列表 - 金额5000-10000元",
+      "loan_type": 1,
+      "amount_search": "5000-10000",
+      "statuscode": 200
+    }
+
+  ]
+}

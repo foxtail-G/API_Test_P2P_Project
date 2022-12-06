@@ -13,7 +13,7 @@
     {
       "desc": "获取随机字母验证码",
       "type": "string",
-      "statusCode": 404
+      "statusCode": 400
     }
   ]
 }

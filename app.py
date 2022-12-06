@@ -47,5 +47,4 @@ def ini_configLog(defaultfilename="P2PAPIlog"):
     # 6.将日志处理器添加到日志对象
     logger.addHandler(sh)
     logger.addHandler(fh)
-if __name__ == '__main__':
-    print(BASE_DIR)
+

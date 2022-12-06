@@ -5,7 +5,7 @@ import json
 import unittest, requests, warnings, logging, random
 
 import app
-import utils
+import tools
 from api.loginAPI import Login_API
 from parameterized import parameterized
 
@@ -20,9 +20,23 @@ class RegLoginCase(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
-    @parameterized.expand(utils.read_img_verify_code('imgVerify.json'))
+    @parameterized.expand(tools.readimgverify_code('imgVerify.json'))
     def test_img_verify_code(self, type, statusCode):
-        print(type, statusCode)
+        """
+        获取短信验证码-参数化
+        :param type:
+        :param statusCode:
+        :return:
+        """
+        r = ''
+        if type == 'int':
+            r = str(random.randint(0, 299))  # 整数参数
+        elif type == 'float':
+            r = str(random.uniform(0.0000000001, 2))  # 小数参数
+        else:
+            r = "abcd"  # 字母参数
+        resp = self.login_api.get_image_code(self.session, r)
+        self.assertEqual(statusCode, resp.status_code)
 
     def test01_sms_code(self):
         """
