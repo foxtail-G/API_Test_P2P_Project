@@ -1,10 +1,13 @@
 """
     测试类
 """
-import random
-import unittest, requests, warnings, logging
+import json
+import unittest, requests, warnings, logging, random
+
+import app
+import utils
 from api.loginAPI import Login_API
-from requests import utils
+from parameterized import parameterized
 
 
 class RegLoginCase(unittest.TestCase):
@@ -17,29 +20,9 @@ class RegLoginCase(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
-    def test00_images_code(self):
-        """
-        获取图⽚验证码，整数参数.获取成功
-        :return:
-        """
-        resp = self.login_api.get_image_code(self.session, str(random.randint(0, 9)))
-        self.assertEqual(resp.status_code, 200, "获取图⽚验证码，整数参数 失败")
-
-    def test01_images_code(self):
-        """
-        获取图⽚验证码，小数参数.获取成功
-        :return:
-        """
-        resp = self.login_api.get_image_code(self.session, str(random.uniform(1, 10)))
-        self.assertEqual(resp.status_code, 200, "获取图⽚验证码，小数参数 失败")
-
-    def test02_images_code(self):
-        """
-        获取图⽚验证码，字母参数.获取失败
-        :return:
-        """
-        resp = self.login_api.get_image_code(self.session, "abacdfo")
-        self.assertEqual(resp.status_code, 400, "获取图⽚验证码，字母参数 失败")
+    @parameterized.expand(utils.read_img_verify_code('imgVerify.json'))
+    def test_img_verify_code(self, type, statusCode):
+        print(type, statusCode)
 
     def test01_sms_code(self):
         """

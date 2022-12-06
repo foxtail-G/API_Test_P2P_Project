@@ -1,1 +1,0 @@
-2022-12-05 19:56:11,884 INFO [root] [Open_Account_TestCase.py(test01_account_certification:40)] - 实名认证-成功:{'status': 200, 'data': {'card_id': '372****937', 'realname': 'æ**'}, 'description': '提交成功!'}
