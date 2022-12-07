@@ -12,7 +12,7 @@ from parameterized import parameterized
 
 class RegLoginCase(unittest.TestCase):
     def setUp(self) -> None:
-        self.login_api = Login_API()  # 实例化注册登录模块xxxx
+        self.login_api = Login_API()  # 实例化注册登录模块gggg
         self.session = requests.Session()
         self.cookie = None
         warnings.simplefilter("ignore", ResourceWarning)
