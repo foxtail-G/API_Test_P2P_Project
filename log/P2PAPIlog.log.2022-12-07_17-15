@@ -1,0 +1,12 @@
+2022-12-07 17:15:22,800 INFO [root] [Reg_Login_TestCase.py(test01_RegUser__success:147)] - 注册账号-成功:{'status': 200, 'data': {'isLogin': '1'}, 'description': '注册成功'}
+2022-12-07 17:15:22,975 INFO [root] [Reg_Login_TestCase.py(test01_RegUser_login_success:321)] - 登录账号成功:{'status': 200, 'description': '登录成功'}
+2022-12-07 17:15:23,137 INFO [root] [Reg_Login_TestCase.py(test01_sms_code:56)] - 获取短信验证码结果:{'status': 200, 'description': '短信发送成功'}
+2022-12-07 17:15:23,340 INFO [root] [Reg_Login_TestCase.py(test02_RegUser_ImgCodeError:179)] - 注册账号失败--图⽚验证码错误:{'status': 100, 'description': '验证码错误!'}
+2022-12-07 17:15:23,462 INFO [root] [Reg_Login_TestCase.py(test02_RegUser_login_UserNotExist:335)] - 登录账号-用户不存在:{'status': 100, 'description': '用户不存在'}
+2022-12-07 17:15:23,606 INFO [root] [Reg_Login_TestCase.py(test02_sms_code:76)] - 获取短信验证码失败-验证码错误:{'status': 100, 'description': '图片验证码错误'}
+2022-12-07 17:15:23,802 INFO [root] [Reg_Login_TestCase.py(test03_RegUser_SMSCodeError:211)] - 注册账号失败--短信验证码错误:{'status': 100, 'description': '验证码错误!'}
+2022-12-07 17:15:23,912 INFO [root] [Reg_Login_TestCase.py(test03_RegUser_login_PwdNotnull:349)] - 登录账号-密码不能为空:{'status': 100, 'description': '密码不能为空'}
+2022-12-07 17:15:24,279 INFO [root] [Reg_Login_TestCase.py(test04_RegUser_SMSCodeError:243)] - 注册账号失败--⼿机已存在:{'status': 100, 'description': '手机已存在!'}
+2022-12-07 17:15:24,397 INFO [root] [Reg_Login_TestCase.py(test04_RegUser_login_PwdNotnull:363)] - 登录账号-密码错误1次:{'status': 100, 'data': {'login_error': 2}, 'description': '密码错误1次,达到3次将锁定账户'}
+2022-12-07 17:15:25,418 INFO [root] [Reg_Login_TestCase.py(test06_RegUser_login_PwdError3:393)] - 登录账号-连续执行密码错误3次:{'status': 100, 'description': '由于连续输入错误密码达到上限，账号已被锁定，请于1.0分钟后重新登录'}
+2022-12-07 17:15:25,681 INFO [root] [Reg_Login_TestCase.py(test08_RegUser_login_NotLogin:425)] - 是否登录检查-未登录:{'status': 250, 'description': '您未登陆！'}

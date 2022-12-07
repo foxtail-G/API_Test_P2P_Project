@@ -20,7 +20,7 @@ class RegLoginCase(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
-    @parameterized.expand(tools.readimgverify_code('imgVerify.json'))
+    @parameterized.expand(tools.read_data('imgVerify.json','get_img_verify_code','type,statusCode'))
     def test_img_verify_code(self, type, statusCode):
         """
         获取短信验证码-参数化

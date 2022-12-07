@@ -5,7 +5,7 @@ import requests, unittest, logging
 from api.inveAPI import inve_api
 from parameterized import parameterized
 
-from tools import read_invest_data
+from tools import read_data
 
 
 class Inve_ProductCase(unittest.TestCase):
@@ -24,7 +24,6 @@ class Inve_ProductCase(unittest.TestCase):
         }
         resp = self.inveapi.get_inve_product_detail(self.session, data)
         self.assertEqual(resp.status_code, 200)
-        self.assertEqual(resp.json().get('status'), 200)  # 断言返回代码
         logging.info(f"获取投资产品详情-成功:{resp.json()}")
 
     def test01_invest_product_query_success(self):
@@ -37,9 +36,22 @@ class Inve_ProductCase(unittest.TestCase):
         self.assertEqual(resp.status_code, 200)
         logging.info(f"投资产品查询-成功 {resp.json()}")
 
-    @parameterized.expand(read_invest_data("invest_data.json"))
-    def test01_get_invest_list(self,*para):
-        print(*para)
+    @parameterized.expand(read_data("invest_data.json", "test_investment_data", "loan_type,amount_search,statuscode"))
+    def test01_get_invest_list(self, loan_type, amount_search, statuscode):
+        """
+        投资产品
+        :param para:
+        :return:
+        """
+        data = {
+            "loan_type": loan_type,
+            "amount_search": amount_search,
+            "statuscode": statuscode
+        }
+        resp = self.inveapi.get_inve_product_list(self.session,data)
+        self.assertEqual(resp.status_code, int(statuscode))
+        print(resp.json())
+
     # def test01_invest_product_list(self):
     #     """
     #     获取 投资产品列表 无参数成功
@@ -59,7 +71,7 @@ class Inve_ProductCase(unittest.TestCase):
     #     data = {"loan_type": "1"}
     #
     #     resp = self.inveapi.get_inve_product_list(self.session, data)
-    #     self.assertEqual(resp.status_code, 200)
+        #     self.assertEqual(resp.status_code, 200)
     #     self.assertEqual(resp.json().get('page'), 1)  # 断言返回代码
     #     logging.info(f"获取产品列表 - 全部标和信用标 - 成功 {resp.json()}")
     #
